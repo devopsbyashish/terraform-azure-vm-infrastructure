@@ -1,6 +1,6 @@
 # 🚀 Terraform Azure VM Infrastructure
 
-This project provisions Azure infrastructure using Terraform with reusable and modular code.
+This project provisions Azure infrastructure using Terraform.
 
 ---
 
