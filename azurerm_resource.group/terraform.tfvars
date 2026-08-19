@@ -8,4 +8,9 @@ resource_groups = {
     name     = "ashish-rg2"
     location = "Central India"
   }
+
+  rg4 = {
+    name     = "ashish-test"
+    location = "Central India"
+  }
 }
