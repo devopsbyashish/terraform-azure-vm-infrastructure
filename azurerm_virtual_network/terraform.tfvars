@@ -13,4 +13,11 @@ virtual_network = {
     resource_group_name = "ashish-rg2"
     address_space       = ["10.2.0.0/16"]
   }
+ vnet4 = {
+    name                = "ashuisbhakuaa"
+    location            = "east us"
+    resource_group_name = "ashish-rg2"
+    address_space       = ["10.2.0.0/16"]
+  }
+  
 }
