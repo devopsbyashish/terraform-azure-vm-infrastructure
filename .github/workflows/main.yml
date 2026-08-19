@@ -1,0 +1,27 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check runner
+        run: |
+          echo "Pipeline is running successfully"
+          echo "Runner: $RUNNER_NAME"
+          echo "OS: $RUNNER_OS"
+
+      - name: Test
+        run: echo "Test completed successfully"
