@@ -1,27 +1,28 @@
-name: CI Pipeline
+name: Terraform CI
 
 on:
+  push:
+    branches:
+      - feature1
+      - main
+
   pull_request:
     branches:
       - main
 
-  push:
-    branches:
-      - main
-
 jobs:
-  test:
+  terraform:
     runs-on: self-hosted
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Check runner
-        run: |
-          echo "Pipeline is running successfully"
-          echo "Runner: $RUNNER_NAME"
-          echo "OS: $RUNNER_OS"
+      - name: Terraform Init
+        run: terraform init
 
-      - name: Test
-        run: echo "Test completed successfully"
+      - name: Terraform Validate
+        run: terraform validate
+
+      - name: Terraform Plan
+        run: terraform plan
